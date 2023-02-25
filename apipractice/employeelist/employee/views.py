@@ -8,9 +8,9 @@ from rest_framework import status
 
 
 @api_view(['GET'])
-def get_api(request):
-          print('...................')
-       emp = Employee.objects.all()
+def get_api(request): 
+       print('..................................',request.data)      
+       emp = Employee.objects.filter(emp_id= request.data['id'])
        serializer = EmployeeSerializer(emp, many = True)
        return Response(serializer.data)
 

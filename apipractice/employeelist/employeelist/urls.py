@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('dataapi/', views.get_api),
     path('postapi/', views.post_api),
-    path('putapi/<int:pk>/', views.put_api),
+    path('putapi/', views.put_api),
     path('patchapi/<int:pk>/', views.patch_api),
     path('deleteapi/<int:pk>/', views.delete_api),
 ]
